@@ -1,1 +1,1 @@
-web:    java $JAVA_OPTS -jar target/dependency/webapp-runner.jar --port 8080 target/ig-calc.war
+web:    java $JAVA_OPTS -jar target/dependency/webapp-runner.jar --port $PORT target/ig-calc.war
