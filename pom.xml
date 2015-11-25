@@ -315,11 +315,16 @@
 				</configuration>
 			</plugin>
 			<!-- Heroku plugin -->
-			<plugin>
+			<!-- Uncomment the below for deploying via mvn clean heroku:deploy-war -->
+			<!-- <plugin>
 				<groupId>com.heroku.sdk</groupId>
 				<artifactId>heroku-maven-plugin</artifactId>
 				<version>0.5.6</version>
-			</plugin>
+				<configuration>
+					<appName>ig-calc</appName>
+				</configuration>
+			</plugin> -->
+			<!-- Deploy to Heroku via Git commits -->
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-dependency-plugin</artifactId>
