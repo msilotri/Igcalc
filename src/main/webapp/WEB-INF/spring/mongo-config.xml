@@ -9,12 +9,21 @@
 	<context:annotation-config />
 
 	<context:component-scan base-package="uk.gov.dwp" />
+	
+	<context:property-placeholder order="1"
+		location="classpath:db.properties" ignore-unresolvable="true" />
 
 	<!-- MongoBD Database configuration host and port -->
-	<mongo:mongo host="127.0.0.1" port="27017" />
+	<mongo:mongo id="mongo" host="${db.host}" port="${db.port}" />
 
 	<!-- Define the mongoDbFactory with your database Name -->
-	<mongo:db-factory dbname="igcalc" />
+	<mongo:db-factory id="mongoDbFactory"
+			host="${db.host}"
+			port="${db.port}"
+			dbname="${db.name}"
+			username="${db.username}"
+			password="${db.password}"
+			mongo-ref="mongo" />
 
 	<bean id="mappingContext"
 		class="org.springframework.data.mongodb.core.mapping.MongoMappingContext" />
