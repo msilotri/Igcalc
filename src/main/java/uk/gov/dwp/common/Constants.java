@@ -17,6 +17,11 @@ public class Constants {
 	public static final String YES = "Yes";
 	public static final String NO = "No";
 	
+	// DateFormat
+	public static final String DATE_FORMAT = "dd/mm/yyyy";
+	public static final String POST_2016 = "Post 2016";
+	public static final String PRE_2016 = "Pre 2016";
+	
 	// Countries
 	public static final String COUNTRIES = "countries";
 	public static final String COUNTRIES_WITHOUT_FROZEN_RATE = "countriesWithoutFrozenRate";

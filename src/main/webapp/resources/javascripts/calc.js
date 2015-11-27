@@ -96,14 +96,14 @@ $(document).ready(function() {
 	$(".datepickershortyear").datepicker(datepickerOptionsShortYear);
 	
 	// Allow only numbers in textbox
-	$("#proRataTablePre75, #proRataUsaTablePre75, #proRataEuraTablePost75, #proRataUsaTablePost75, #nspDiv, #rreDiv, #customerDetailsDiv").on("keypress", ".number", function (e) {
+	$("#proRataTablePre75, #proRataUsaTablePre75, #proRataEuraTablePost75, #proRataUsaTablePost75, #nspDiv, #rreDiv, #inheritedDiv, #customerDetailsDiv").on("keypress", ".number", function (e) {
 	    if (e.which != 8 && e.which != 0 && (e.which < 48 || e.which > 57)) {
 	    	return false;
 	    }
 	});
 	
 	// Allow only numbers with 2 decimal places in textbox
-	$("#proRataTablePre75, #proRataUsaTablePre75, #proRataEuraTablePost75, #proRataUsaTablePost75, #espTable, #nspDiv, #rreDiv, #customerDetailsDiv").on("keypress", ".numberWithDecimal", function(event) {
+	$("#proRataTablePre75, #proRataUsaTablePre75, #proRataEuraTablePost75, #proRataUsaTablePost75, #espTable, #nspDiv, #rreDiv, #inheritedDiv, #customerDetailsDiv").on("keypress", ".numberWithDecimal", function(event) {
 		if ((event.which != 46 || $(this).val().indexOf('.') != -1) &&
 				((event.which < 48 || event.which > 57) &&
 						(event.which != 0 && event.which != 8))) {
@@ -120,7 +120,7 @@ $(document).ready(function() {
 		}
 	});
 	
-	$("#proRataTablePre75, #proRataUsaTablePre75, #proRataEuraTablePost75, #proRataUsaTablePost75, #espTable, #nspDiv, #rreDiv, #customerDetailsDiv").on("change", ".numberWithDecimal", function(event) {
+	$("#proRataTablePre75, #proRataUsaTablePre75, #proRataEuraTablePost75, #proRataUsaTablePost75, #espTable, #nspDiv, #rreDiv, #inheritedDiv, #customerDetailsDiv").on("change", ".numberWithDecimal", function(event) {
 		var text = $(this).val();
 		var num = "";
 		if (text) {
@@ -432,6 +432,27 @@ $(document).ready(function() {
 		$("#grbRreEntitlement").val(grbRreEntitlement);
 		$("#rreTotalRreEntitlement").val(rreTotalRreEntitlement);		
 	});
+	
+	// Inherited calculations
+	var customerSpaDateRule = false;
+	var partnerSpaDateRule = false;
+	var dateOfMarriageRule = false;
+	$("input[name$=Rule").each(function(index, obj) {
+		var name = $(obj).attr("name");
+		var val = $(obj).val();
+		if (name === "customerSpaDateRule" && val === "Post 2016") {
+			customerSpaDateRule = true;
+		} else if (name === "partnerSpaDateRule" && val === "Post 2016") {
+			partnerSpaDateRule = true;
+		} else if (name === "dateOfMarriageRule" && val === "Post 2016") {
+			dateOfMarriageRule = true;
+		}
+	});	
+	if (customerSpaDateRule === true && partnerSpaDateRule === true && dateOfMarriageRule === true) {
+		$(".hiddenDiv").hide();
+	} else {
+		$(".hiddenDiv").show();
+	}
 	
 	// NSP calculations
 	$("#nspDiv").on("change", "#oldRulesAmt, #newRulesAmt", function() {

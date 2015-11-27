@@ -105,6 +105,8 @@ public class CustomerDetailsController {
 			@ModelAttribute(Constants.CUSTOMER_DETAILS) CustomerDetails customerDetails, HttpSession session) {
 		logger.info("Customer Details captured : " + customerDetails);
 		session.setAttribute(Constants.CUSTOMER_DETAILS, customerDetails);
+		// Remove partner details from session
+		session.removeAttribute(Constants.PARTNER_DETAILS);
 		return "redirect:/admin/select_calculation";
 	}
 

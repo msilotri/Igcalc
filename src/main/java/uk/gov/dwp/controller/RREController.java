@@ -33,7 +33,7 @@ public class RREController {
 	}
 
 	@RequestMapping(value = "/admin/rre_calculation", method = RequestMethod.GET)
-	public String showEspCalculation(@ModelAttribute(Constants.RRE_DETAILS) RREDetails rreDetails,
+	public String showRreCalculation(@ModelAttribute(Constants.RRE_DETAILS) RREDetails rreDetails,
 			@ModelAttribute(Constants.CUSTOMER_DETAILS) CustomerDetails customerDetails, HttpSession session) {
 		logger.info("Displaying the RRE Calculation page...");
 
@@ -63,7 +63,7 @@ public class RREController {
 	}
 
 	@RequestMapping(value = "/admin/select_calculation_rre", method = RequestMethod.POST)
-	public String submitEspDetails(@ModelAttribute(Constants.RRE_DETAILS) RREDetails rreDetails) {
+	public String submitRreDetails(@ModelAttribute(Constants.RRE_DETAILS) RREDetails rreDetails) {
 		logger.info("RRE Details captured : " + rreDetails);
 		return "redirect:/admin/select_calculation";
 	}

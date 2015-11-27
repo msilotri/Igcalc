@@ -2,13 +2,14 @@ package uk.gov.dwp.model;
 
 /**
  * Represents the inherited details
+ * 
  * @author samba.mitra
  *
  */
 public class InheritedDetails {
-	private String customerSpaDate;
-	private String partnerSpaDate;
-	private String dateOfMarriage;
+	private String customerSpaDateRule;
+	private String partnerSpaDateRule;
+	private String dateOfMarriageRule;
 	private String deferralLumpSum;
 	private String taxYear;
 	private String protectedPayment;
@@ -49,30 +50,29 @@ public class InheritedDetails {
 	private String apEspInh;
 	private String grbEspInh;
 	private String bpEspInh;
-	private String total;
 
-	public String getCustomerSpaDate() {
-		return customerSpaDate;
+	public String getCustomerSpaDateRule() {
+		return customerSpaDateRule;
 	}
 
-	public void setCustomerSpaDate(String customerSpaDate) {
-		this.customerSpaDate = customerSpaDate;
+	public void setCustomerSpaDateRule(String customerSpaDateRule) {
+		this.customerSpaDateRule = customerSpaDateRule;
 	}
 
-	public String getPartnerSpaDate() {
-		return partnerSpaDate;
+	public String getPartnerSpaDateRule() {
+		return partnerSpaDateRule;
 	}
 
-	public void setPartnerSpaDate(String partnerSpaDate) {
-		this.partnerSpaDate = partnerSpaDate;
+	public void setPartnerSpaDateRule(String partnerSpaDateRule) {
+		this.partnerSpaDateRule = partnerSpaDateRule;
 	}
 
-	public String getDateOfMarriage() {
-		return dateOfMarriage;
+	public String getDateOfMarriageRule() {
+		return dateOfMarriageRule;
 	}
 
-	public void setDateOfMarriage(String dateOfMarriage) {
-		this.dateOfMarriage = dateOfMarriage;
+	public void setDateOfMarriageRule(String dateOfMarriageRule) {
+		this.dateOfMarriageRule = dateOfMarriageRule;
 	}
 
 	public String getDeferralLumpSum() {
@@ -395,33 +395,25 @@ public class InheritedDetails {
 		this.bpEspInh = bpEspInh;
 	}
 
-	public String getTotal() {
-		return total;
-	}
-
-	public void setTotal(String total) {
-		this.total = total;
-	}
-
 	@Override
 	public String toString() {
-		return "InheritedDetails [customerSpaDate=" + customerSpaDate + ", partnerSpaDate=" + partnerSpaDate
-				+ ", dateOfMarriage=" + dateOfMarriage + ", deferralLumpSum=" + deferralLumpSum + ", taxYear=" + taxYear
-				+ ", protectedPayment=" + protectedPayment + ", spTopUp=" + spTopUp + ", pre97Ap=" + pre97Ap
-				+ ", post97Ap=" + post97Ap + ", post02Ap=" + post02Ap + ", pre97ApGross=" + pre97ApGross + ", pre88Gmp="
-				+ pre88Gmp + ", pre88NonGmp=" + pre88NonGmp + ", post88Gmp=" + post88Gmp + ", post88NonGmp="
-				+ post88NonGmp + ", grb=" + grb + ", pre2002ApEsp=" + pre2002ApEsp + ", post2002ApEsp=" + post2002ApEsp
-				+ ", grbEsp=" + grbEsp + ", bpEsp=" + bpEsp + ", taxYearRevalued=" + taxYearRevalued
-				+ ", protectedPaymentRevalued=" + protectedPaymentRevalued + ", spTopUpRevalued=" + spTopUpRevalued
-				+ ", pre97ApRevalued=" + pre97ApRevalued + ", post97ApRevalued=" + post97ApRevalued
-				+ ", post02ApRevalued=" + post02ApRevalued + ", pre97ApGrossRevalued=" + pre97ApGrossRevalued
-				+ ", pre88GmpRevalued=" + pre88GmpRevalued + ", pre88NonGmpRevalued=" + pre88NonGmpRevalued
-				+ ", post88GmpRevalued=" + post88GmpRevalued + ", post88NonGmpRevalued=" + post88NonGmpRevalued
-				+ ", grbRevalued=" + grbRevalued + ", pre2002ApEspRevalued=" + pre2002ApEspRevalued
-				+ ", post2002ApEspRevalued=" + post2002ApEspRevalued + ", grbEspRevalued=" + grbEspRevalued
-				+ ", bpEspRevalued=" + bpEspRevalued + ", protectedPaymentInh=" + protectedPaymentInh + ", spTopupInh="
-				+ spTopupInh + ", apInh=" + apInh + ", grbInh=" + grbInh + ", apEspInh=" + apEspInh + ", grbEspInh="
-				+ grbEspInh + ", bpEspInh=" + bpEspInh + ", total=" + total + "]";
+		return "InheritedDetails [customerSpaDateRule=" + customerSpaDateRule + ", partnerSpaDateRule="
+				+ partnerSpaDateRule + ", dateOfMarriageRule=" + dateOfMarriageRule + ", deferralLumpSum="
+				+ deferralLumpSum + ", taxYear=" + taxYear + ", protectedPayment=" + protectedPayment + ", spTopUp="
+				+ spTopUp + ", pre97Ap=" + pre97Ap + ", post97Ap=" + post97Ap + ", post02Ap=" + post02Ap
+				+ ", pre97ApGross=" + pre97ApGross + ", pre88Gmp=" + pre88Gmp + ", pre88NonGmp=" + pre88NonGmp
+				+ ", post88Gmp=" + post88Gmp + ", post88NonGmp=" + post88NonGmp + ", grb=" + grb + ", pre2002ApEsp="
+				+ pre2002ApEsp + ", post2002ApEsp=" + post2002ApEsp + ", grbEsp=" + grbEsp + ", bpEsp=" + bpEsp
+				+ ", taxYearRevalued=" + taxYearRevalued + ", protectedPaymentRevalued=" + protectedPaymentRevalued
+				+ ", spTopUpRevalued=" + spTopUpRevalued + ", pre97ApRevalued=" + pre97ApRevalued
+				+ ", post97ApRevalued=" + post97ApRevalued + ", post02ApRevalued=" + post02ApRevalued
+				+ ", pre97ApGrossRevalued=" + pre97ApGrossRevalued + ", pre88GmpRevalued=" + pre88GmpRevalued
+				+ ", pre88NonGmpRevalued=" + pre88NonGmpRevalued + ", post88GmpRevalued=" + post88GmpRevalued
+				+ ", post88NonGmpRevalued=" + post88NonGmpRevalued + ", grbRevalued=" + grbRevalued
+				+ ", pre2002ApEspRevalued=" + pre2002ApEspRevalued + ", post2002ApEspRevalued=" + post2002ApEspRevalued
+				+ ", grbEspRevalued=" + grbEspRevalued + ", bpEspRevalued=" + bpEspRevalued + ", protectedPaymentInh="
+				+ protectedPaymentInh + ", spTopupInh=" + spTopupInh + ", apInh=" + apInh + ", grbInh=" + grbInh
+				+ ", apEspInh=" + apEspInh + ", grbEspInh=" + grbEspInh + ", bpEspInh=" + bpEspInh + "]";
 	}
 
 }
