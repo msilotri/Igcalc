@@ -44,7 +44,7 @@
 					<label class="form-label-bold">Spouse/CP Components at Date of Death</label>
 					<label class="form-label">Tax Year</label>
 					<form:input class="form-control" path="taxYear" title="This should be in the format yyyy/yy" />
-					<span class="hiddenDiv">
+					<span class="hiddenSpan">
 						<label class="form-label">Protected Payment</label>
 						<span>&#163;</span><form:input class="form-control numberWithDecimal" path="protectedPayment" />
 						<label class="form-label">SP Top UP / ESP</label>
@@ -83,7 +83,7 @@
 					<label class="form-label-bold">Re-valued Spouse/CP Components at Customer's Date of Entitlement</label>
 					<label class="form-label">Tax Year</label>
 					<form:input class="form-control" path="taxYearRevalued" title="This should be in the format yyyy/yy" />
-					<span class="hiddenDiv">
+					<span class="hiddenSpan">
 						<label class="form-label">Protected Payment</label>
 						<span>&#163;</span><form:input class="form-control numberWithDecimal" path="protectedPaymentRevalued" readonly="true" />
 						<label class="form-label">SP Top UP / ESP</label>
@@ -118,7 +118,7 @@
 				</fieldset>
 
 				<fieldset class="form-group">
-					<span class="hiddenDiv">
+					<span class="hiddenSpan">
 						<legend class="visuallyhidden">Payable Amount at Customer's Date of Entitlement</legend>
 						<label class="form-label-bold">Payable Amount at Customer's Date of Entitlement</label>
 						<label class="form-label">Protected Payment (Inh)</label>
@@ -137,6 +137,8 @@
 						<span>&#163;</span><form:input class="form-control" path="bpEspInh" />
 					</span>
 				</fieldset>
+				
+				<span class="spanHidden" style="display: none;">NO COMPONENTS INHERITABLE</div>
 
 				<input type="submit" id="inheritedNextBtn" name="inheritedNextBtn" class="button" alt="Continue" value="Continue" />
 			</div>

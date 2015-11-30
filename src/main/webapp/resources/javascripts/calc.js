@@ -449,9 +449,11 @@ $(document).ready(function() {
 		}
 	});	
 	if (customerSpaDateRule === true && partnerSpaDateRule === true && dateOfMarriageRule === true) {
-		$(".hiddenDiv").hide();
+		$(".hiddenSpan").hide();
+		$(".spanHidden").show();
 	} else {
-		$(".hiddenDiv").show();
+		$(".spanHidden").hide();
+		$(".hiddenSpan").show();
 	}
 	
 	// NSP calculations

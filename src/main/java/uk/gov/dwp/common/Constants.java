@@ -18,7 +18,7 @@ public class Constants {
 	public static final String NO = "No";
 	
 	// DateFormat
-	public static final String DATE_FORMAT = "dd/mm/yyyy";
+	public static final String DATE_FORMAT = "dd/MM/yyyy";
 	public static final String POST_2016 = "Post 2016";
 	public static final String PRE_2016 = "Pre 2016";
 	
