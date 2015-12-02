@@ -138,7 +138,7 @@
 					</span>
 				</fieldset>
 				
-				<span class="spanHidden" style="display: none;">NO COMPONENTS INHERITABLE</div>
+				<div class="hiddenDiv" style="display: none;">NO COMPONENTS INHERITABLE</div>
 
 				<input type="submit" id="inheritedNextBtn" name="inheritedNextBtn" class="button" alt="Continue" value="Continue" />
 			</div>

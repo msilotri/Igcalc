@@ -15,23 +15,24 @@ import org.springframework.stereotype.Component;
 
 /**
  * Defines action on successful logout from the application
+ * 
  * @author samba.mitra
  *
  */
 @Component
 public class CustomLogoutHandler extends SimpleUrlLogoutSuccessHandler implements LogoutSuccessHandler {
 
-	@Override
-	public void onLogoutSuccess(HttpServletRequest request, HttpServletResponse response, Authentication authentication)
-			throws IOException, ServletException {
+    @Override
+    public void onLogoutSuccess(HttpServletRequest request, HttpServletResponse response, Authentication authentication)
+            throws IOException, ServletException {
 
-		if (authentication != null && !(authentication instanceof AnonymousAuthenticationToken)) {
-			new SecurityContextLogoutHandler().logout(request, response, authentication);
-		}
-		
-		setDefaultTargetUrl("/login?logout");
-		super.onLogoutSuccess(request, response, authentication);
+        if (authentication != null && !(authentication instanceof AnonymousAuthenticationToken)) {
+            new SecurityContextLogoutHandler().logout(request, response, authentication);
+        }
 
-	}
+        setDefaultTargetUrl("/login?logout");
+        super.onLogoutSuccess(request, response, authentication);
+
+    }
 
 }

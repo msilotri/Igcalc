@@ -14,23 +14,24 @@ import uk.gov.dwp.model.User;
 
 /**
  * Implementation class for user database access
+ * 
  * @author samba.mitra
  *
  */
 @Repository
 public class UserRepositoryImpl implements UserRepository {
 
-	private static final Logger logger = LoggerFactory.getLogger(UserRepositoryImpl.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(UserRepositoryImpl.class);
 
-	@Autowired
-	private MongoTemplate mongoTemplate;
+    @Autowired
+    private MongoTemplate mongoTemplate;
 
-	@Override
-	public User findUserByUsername(String username) {
-		MongoOperations mongoOperations = (MongoOperations) mongoTemplate;
-		User user = mongoOperations.findOne(new Query(Criteria.where("username").is(username)), User.class);
-		logger.info("User retrieved from db : " + user);
-		return user;
-	}
+    @Override
+    public User findUserByUsername(String username) {
+        MongoOperations mongoOperations = (MongoOperations) mongoTemplate;
+        User user = mongoOperations.findOne(new Query(Criteria.where("username").is(username)), User.class);
+        LOGGER.info("User retrieved from db : " + user);
+        return user;
+    }
 
 }

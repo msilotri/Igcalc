@@ -13,25 +13,26 @@ import uk.gov.dwp.model.User;
 
 /**
  * Handles requests for the application login/logout
+ * 
  * @author samba.mitra
  */
 @Controller
 public class LoginController {
 
-	private static final Logger logger = LoggerFactory.getLogger(LoginController.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(LoginController.class);
 
-	@RequestMapping(value = { "/", "/login" }, method = RequestMethod.GET)
-	public String showLogin(Model model, HttpSession session) {
-		if (session.getAttribute("user") != null) {
-			logger.info("Already logged in.. redirecting to home");
-			return "redirect:/admin/home";
-		}
-		model.addAttribute("user", new User());
-		return "login";
-	}
+    @RequestMapping(value = { "/", "/login" }, method = RequestMethod.GET)
+    public String showLogin(Model model, HttpSession session) {
+        if (session.getAttribute("user") != null) {
+            LOGGER.info("Already logged in.. redirecting to home");
+            return "redirect:/admin/home";
+        }
+        model.addAttribute("user", new User());
+        return "login";
+    }
 
-	@RequestMapping(value = "/admin/home", method = RequestMethod.GET)
-	public String showHome() {
-		return "home";
-	}
+    @RequestMapping(value = "/admin/home", method = RequestMethod.GET)
+    public String showHome() {
+        return "home";
+    }
 }

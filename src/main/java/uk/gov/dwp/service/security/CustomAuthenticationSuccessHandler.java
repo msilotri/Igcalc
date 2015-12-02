@@ -18,31 +18,30 @@ import uk.gov.dwp.model.SecureUserDetails;
 
 /**
  * Authentication success handler defines action when successfully authenticated
+ * 
  * @author samba.mitra
  *
  */
 @Component
 public class CustomAuthenticationSuccessHandler implements AuthenticationSuccessHandler {
 
-	private static final Logger logger = LoggerFactory.getLogger(CustomAuthenticationSuccessHandler.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(CustomAuthenticationSuccessHandler.class);
 
+    @Override
+    public void onAuthenticationSuccess(HttpServletRequest request, HttpServletResponse response,
+            Authentication authentication) throws IOException, ServletException {
 
-	@Override
-	public void onAuthenticationSuccess(HttpServletRequest request, HttpServletResponse response,
-			Authentication authentication) throws IOException, ServletException {
+        HttpSession session = request.getSession();
+        if (session.getAttribute("user") == null && authentication != null
+                && !(authentication instanceof AnonymousAuthenticationToken)) {
+            SecureUserDetails user = (SecureUserDetails) authentication.getPrincipal();
+            LOGGER.info("Setting the authenticated user in session...");
+            session.setAttribute("user", user);
+        }
 
-		HttpSession session = request.getSession();
-		if (session.getAttribute("user") == null) {
-			if (authentication != null && !(authentication instanceof AnonymousAuthenticationToken)) {
-				SecureUserDetails user = (SecureUserDetails) authentication.getPrincipal();
-				logger.info("Setting the authenticated user in session...");
-				session.setAttribute("user", user);
-			}
-		}
-		
-		// set our response to OK status
-		response.setStatus(HttpServletResponse.SC_OK);
-		response.sendRedirect("admin/home");
-	}
+        // set our response to OK status
+        response.setStatus(HttpServletResponse.SC_OK);
+        response.sendRedirect("admin/home");
+    }
 
 }

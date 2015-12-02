@@ -8,34 +8,33 @@ import org.apache.commons.collections4.list.LazyList;
 
 @SuppressWarnings({ "serial", "rawtypes" })
 public class ShrinkableLazyList extends LazyList {
-	
-	private static List listToBeDecorated;
 
-	@SuppressWarnings({ "unchecked" })
-	protected ShrinkableLazyList(List list, Factory factory) {
-		super(list, factory);
-	}
+    private static List listToBeDecorated;
 
-	/**
-	 * Decorates list with shrinkable lazy list.
-	 */
-	public static List decorate(List list, Factory factory) {
-		listToBeDecorated = list;
-		return new ShrinkableLazyList(list, factory);
-	}
+    @SuppressWarnings({ "unchecked" })
+    protected ShrinkableLazyList(List list, Factory factory) {
+        super(list, factory);
+    }
 
-	@SuppressWarnings("static-access")
-	public void shrink() {
-		for (Iterator i = this.listToBeDecorated.iterator(); i.hasNext();) {
-			if (i.next() == null) {
-				i.remove();
-			}
-		}
-	}
+    /**
+     * Decorates list with shrinkable lazy list.
+     */
+    public static List decorate(List list, Factory factory) {
+        listToBeDecorated = list;
+        return new ShrinkableLazyList(list, factory);
+    }
 
-	@Override
-	public Iterator iterator() {
-		shrink();
-		return super.iterator();
-	}
+    public void shrink() {
+        for (Iterator i = listToBeDecorated.iterator(); i.hasNext();) {
+            if (i.next() == null) {
+                i.remove();
+            }
+        }
+    }
+
+    @Override
+    public Iterator iterator() {
+        shrink();
+        return super.iterator();
+    }
 }

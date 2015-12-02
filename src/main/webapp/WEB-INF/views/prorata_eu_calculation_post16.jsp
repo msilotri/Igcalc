@@ -81,13 +81,7 @@
 							</tr>
 							<tr>
 								<td><span>&#163;</span><form:input class="form-control fillSpace amountReqForQualYear numberWithDecimal" path="listOfInsuranceRecords[${x.index}].amountReqForQualYear" /></td>
-								<td>
-									<form:select class="form-control fillSpace" path="listOfInsuranceRecords[${x.index}].qualYears">
-										<form:option value=""></form:option>
-										<form:option value="Yes">Yes</form:option>
-										<form:option value="No">No</form:option>
-									</form:select>
-								</td>
+								<td><form:input class="form-control fillSpace" path="listOfInsuranceRecords[${x.index}].qualYears" readonly="true" /></td>
 								<td></td>
 							</tr>
 							<tr>
@@ -170,13 +164,7 @@
 							</tr>
 							<tr>
 								<td><span>&#163;</span><form:input class="form-control fillSpace amountReqForQualYear numberWithDecimal" path="listOfInsuranceRecords[0].amountReqForQualYear" /></td>
-								<td>
-									<form:select class="form-control fillSpace" path="listOfInsuranceRecords[0].qualYears">
-										<form:option value=""></form:option>
-										<form:option value="Yes">Yes</form:option>
-										<form:option value="No">No</form:option>
-									</form:select>
-								</td>
+								<td><form:input class="form-control fillSpace" path="listOfInsuranceRecords[0].qualYears" readonly="true" /></td>
 								<td></td>
 							</tr>
 							<tr>

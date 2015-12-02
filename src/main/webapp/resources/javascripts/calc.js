@@ -203,7 +203,7 @@ $(document).ready(function() {
 	// Post 75 EU/RA add insurance record
 	$("#proRataEuraTablePost75").on("click", ".addProRataEuraPost75", function() {
 		var tblBodyCount = $("#proRataEuraTablePost75 tbody").length;
-		$("#proRataEuraTablePost75 tbody:last").after('<tbody><tr><th colspan="3">Country (a)</th></tr><tr><td colspan="3"><select class="form-control fillSpace" name="listOfInsuranceRecords[' + tblBodyCount + '].countryProRata"></select></td></tr><tr><th>From (b)</th><th>To (c)</th><th>Total No. of Weeks (d)</th></tr><tr><td><input class="form-control datepickershortyear fillSpace" type="text" name="listOfInsuranceRecords[' + tblBodyCount + '].fromProRata" title="This should be in the format dd/mm/yy" /></td><td><input class="form-control datepickershortyear fillSpace" type="text" name="listOfInsuranceRecords[' + tblBodyCount + '].toProRata" title="This should be in the format dd/mm/yy" /></td><td><input class="form-control fillSpace number" type="text" name="listOfInsuranceRecords[' + tblBodyCount + '].totalNoOfWeeks" /></td></tr><tr><th>No. of foreign employed persons conts (e)</th><th>2/3 Upper earnings level (f)</th><th>Calculation 1 Total (g) = (e) X (f)</th></tr><tr><td><input class="form-control fillSpace noOfForeignEmployed number" type="text" name="listOfInsuranceRecords[' + tblBodyCount + '].noOfForeignEmployed" /></td><td><span>&#163;</span><input class="form-control fillSpace twoThirdUpper numberWithDecimal" type="text" name="listOfInsuranceRecords[' + tblBodyCount + '].twoThirdUpper" /></td><td><span>&#163;</span><input class="form-control fillSpace calc1" type="text" name="listOfInsuranceRecords[' + tblBodyCount + '].calc1" readonly="readonly" /></td></tr><tr><th>No. of other foreign conts and/or No. of credits (h)</th><th>Appropriate lower earnings level (i)</th><th>Calculation 2 Total (j) = (h) X (i)</th></tr><tr><td><input class="form-control fillSpace noOfOtherForeign number" type="text" name="listOfInsuranceRecords[' + tblBodyCount + '].noOfOtherForeign" /></td><td><span>&#163;</span><input class="form-control fillSpace appropriateLowerEarnings numberWithDecimal" type="text" name="listOfInsuranceRecords[' + tblBodyCount + '].appropriateLowerEarnings" /></td><td><span>&#163;</span><input class="form-control fillSpace calc2" type="text" name="listOfInsuranceRecords[' + tblBodyCount + '].calc2" readonly="readonly" /></td></tr><tr><th>UK earnings factor (k)</th><th>Calculation 3 (l) = Total (g) & (j) & (k)</th><th></th></tr><tr><td><span>&#163;</span><input class="form-control fillSpace ukEarningsFactor numberWithDecimal" type="text" name="listOfInsuranceRecords[' + tblBodyCount + '].ukEarningsFactor" /></td><td><span>&#163;</span><input class="form-control fillSpace" type="text" name="listOfInsuranceRecords[' + tblBodyCount + '].calc3" readonly="readonly" /></td><td></td></tr><tr><th>Amount required for qualifying year (m)</th><th>Qualifying years (n) = where (l) equals or exceeds (m)</th><th></th></tr><tr><td><span>&#163;</span><input class="form-control fillSpace amountReqForQualYear numberWithDecimal" type="text" name="listOfInsuranceRecords[' + tblBodyCount + '].amountReqForQualYear" /></td><td><select class="form-control fillSpace" name="listOfInsuranceRecords[' + tblBodyCount + '].qualYears"><option value=""></option<option value="Yes">Yes</option><option value="No">No</option></select></td><td></td></tr><tr><th>Qualifying UK Weeks (o)</th><th>Qualifying Foreign Weeks (p)</th><th></th></tr><tr><td><input class="form-control fillSpace qualUkWeeks number" type="text" name="listOfInsuranceRecords[' + tblBodyCount + '].qualUkWeeks" /></td><td><input class="form-control fillSpace qualForeignWeeks number" type="text" name="listOfInsuranceRecords[' + tblBodyCount + '].qualForeignWeeks" /></td><td><a href="javascript:void(0);" class="removeProRataEuraPost75">Remove</a></td></tr></tbody>');
+		$("#proRataEuraTablePost75 tbody:last").after('<tbody><tr><th colspan="3">Country (a)</th></tr><tr><td colspan="3"><select class="form-control fillSpace" name="listOfInsuranceRecords[' + tblBodyCount + '].countryProRata"></select></td></tr><tr><th>From (b)</th><th>To (c)</th><th>Total No. of Weeks (d)</th></tr><tr><td><input class="form-control datepickershortyear fillSpace" type="text" name="listOfInsuranceRecords[' + tblBodyCount + '].fromProRata" title="This should be in the format dd/mm/yy" /></td><td><input class="form-control datepickershortyear fillSpace" type="text" name="listOfInsuranceRecords[' + tblBodyCount + '].toProRata" title="This should be in the format dd/mm/yy" /></td><td><input class="form-control fillSpace number" type="text" name="listOfInsuranceRecords[' + tblBodyCount + '].totalNoOfWeeks" /></td></tr><tr><th>No. of foreign employed persons conts (e)</th><th>2/3 Upper earnings level (f)</th><th>Calculation 1 Total (g) = (e) X (f)</th></tr><tr><td><input class="form-control fillSpace noOfForeignEmployed number" type="text" name="listOfInsuranceRecords[' + tblBodyCount + '].noOfForeignEmployed" /></td><td><span>&#163;</span><input class="form-control fillSpace twoThirdUpper numberWithDecimal" type="text" name="listOfInsuranceRecords[' + tblBodyCount + '].twoThirdUpper" /></td><td><span>&#163;</span><input class="form-control fillSpace calc1" type="text" name="listOfInsuranceRecords[' + tblBodyCount + '].calc1" readonly="readonly" /></td></tr><tr><th>No. of other foreign conts and/or No. of credits (h)</th><th>Appropriate lower earnings level (i)</th><th>Calculation 2 Total (j) = (h) X (i)</th></tr><tr><td><input class="form-control fillSpace noOfOtherForeign number" type="text" name="listOfInsuranceRecords[' + tblBodyCount + '].noOfOtherForeign" /></td><td><span>&#163;</span><input class="form-control fillSpace appropriateLowerEarnings numberWithDecimal" type="text" name="listOfInsuranceRecords[' + tblBodyCount + '].appropriateLowerEarnings" /></td><td><span>&#163;</span><input class="form-control fillSpace calc2" type="text" name="listOfInsuranceRecords[' + tblBodyCount + '].calc2" readonly="readonly" /></td></tr><tr><th>UK earnings factor (k)</th><th>Calculation 3 (l) = Total (g) & (j) & (k)</th><th></th></tr><tr><td><span>&#163;</span><input class="form-control fillSpace ukEarningsFactor numberWithDecimal" type="text" name="listOfInsuranceRecords[' + tblBodyCount + '].ukEarningsFactor" /></td><td><span>&#163;</span><input class="form-control fillSpace" type="text" name="listOfInsuranceRecords[' + tblBodyCount + '].calc3" readonly="readonly" /></td><td></td></tr><tr><th>Amount required for qualifying year (m)</th><th>Qualifying years (n) = where (l) equals or exceeds (m)</th><th></th></tr><tr><td><span>&#163;</span><input class="form-control fillSpace amountReqForQualYear numberWithDecimal" type="text" name="listOfInsuranceRecords[' + tblBodyCount + '].amountReqForQualYear" /></td><td><input type="text" class="form-control fillSpace" name="listOfInsuranceRecords[' + tblBodyCount + '].qualYears" readonly="readonly" /></td><td></td></tr><tr><th>Qualifying UK Weeks (o)</th><th>Qualifying Foreign Weeks (p)</th><th></th></tr><tr><td><input class="form-control fillSpace qualUkWeeks number" type="text" name="listOfInsuranceRecords[' + tblBodyCount + '].qualUkWeeks" /></td><td><input class="form-control fillSpace qualForeignWeeks number" type="text" name="listOfInsuranceRecords[' + tblBodyCount + '].qualForeignWeeks" /></td><td><a href="javascript:void(0);" class="removeProRataEuraPost75">Remove</a></td></tr></tbody>');
 		$(".datepickershortyear").datepicker(datepickerOptionsShortYear);
 		populateCountriesWithoutFrozenRate();
 	});
@@ -218,7 +218,7 @@ $(document).ready(function() {
 	// Post 75 USA add insurance record
 	$("#proRataUsaTablePost75").on("click", ".addProRataUsaPost75", function() {
 		var tblBodyCount = $("#proRataUsaTablePost75 tbody").length;
-		$("#proRataUsaTablePost75 tbody:last").after('<tbody><tr><th>Country (a)</th><th>From (b)</th><th>To (c)</th><th>Total No. of Weeks (d)</th></tr><tr><td><select class="form-control fillSpace" name="listOfInsuranceRecords[' + tblBodyCount + '].countryProRata"></select></td><td><input class="form-control datepickershortyear fillSpace" name="listOfInsuranceRecords[' + tblBodyCount + '].fromProRata" type="text" title="This should be in the format dd/mm/yy" /></td><td><input class="form-control datepickershortyear fillSpace" name="listOfInsuranceRecords[' + tblBodyCount + '].toProRata" type="text" title="This should be in the format dd/mm/yy" /></td><td><input class="form-control fillSpace number" name="listOfInsuranceRecords[' + tblBodyCount + '].totalNoOfWeeks" type="text" /></td></tr><tr><th>US QC in tax year (e)</th><th>Calculation 1 Total (f) = (e) X (13)</th><th></th></tr><tr><td><input class="form-control fillSpace usQcInTaxYear number" name="listOfInsuranceRecords[' + tblBodyCount + '].usQcInTaxYear" type="text" /></td><td><input class="form-control fillSpace calc1 number" name="listOfInsuranceRecords[' + tblBodyCount + '].calc1" type="text" readonly="readonly" /></td><td></td></tr><tr><th>Appropriate lower earnings level (g)</th><th>Calculation 2 Total (h) = (f) X (g)</th><th></th></tr><tr><td><span>&#163;</span><input class="form-control fillSpace appropriateLowerEarnings numberWithDecimal" name="listOfInsuranceRecords[' + tblBodyCount + '].appropriateLowerEarnings" type="text" /></td><td><span>&#163;</span><input class="form-control fillSpace calc2" name="listOfInsuranceRecords[' + tblBodyCount + '].calc2" type="text" readonly="readonly" /></td><td></td></tr><tr><th>UK earnings factor (i)</th><th>Calculation 3 Total (j) = (h) & (i)</th><th></th></tr><tr><td><span>&#163;</span><input class="form-control fillSpace ukEarningsFactor numberWithDecimal" name="listOfInsuranceRecords[' + tblBodyCount + '].ukEarningsFactor" type="text" /></td><td><span>&#163;</span><input class="form-control fillSpace calc3" name="listOfInsuranceRecords[' + tblBodyCount + '].calc3" type="text" readonly="readonly" /></td><td></td></tr><tr><th>Amount required for qualifying year (k)</th><th>Qualifying years (l) = where (j) equals or exceeds (k)</th><th>Rounded UK Weeks Total (m) = (i) / (g)</th></tr><tr><td><span>&#163;</span><input class="form-control fillSpace amountReqForQualYear numberWithDecimal" name="listOfInsuranceRecords[' + tblBodyCount + '].amountReqForQualYear" type="text" /></td><td><select class="form-control fillSpace" name="listOfInsuranceRecords[' + tblBodyCount + '].qualYears"><option value=""></option><option value="Yes">Yes</option><option value="No">No</option></select></td><td><input class="form-control fillSpace roundedUkWeeksTotal" name="listOfInsuranceRecords[' + tblBodyCount + '].roundedUkWeeksTotal" type="text" readonly="readonly" /></td></tr><tr><th>Qualifying UK Weeks (n)</th><th>Qualifying Foreign Weeks (o)</th><th></th></tr><tr><td><input class="form-control fillSpace qualUkWeeks number" name="listOfInsuranceRecords[' + tblBodyCount + '].qualUkWeeks" type="text" /></td><td><input class="form-control fillSpace qualForeignWeeks number" name="listOfInsuranceRecords[' + tblBodyCount + '].qualForeignWeeks" type="text" /></td><td><a href="javascript:void(0);" class="removeProRataUsaPost75">Remove</a></td></tr></tbody>');
+		$("#proRataUsaTablePost75 tbody:last").after('<tbody><tr><th>Country (a)</th><th>From (b)</th><th>To (c)</th><th>Total No. of Weeks (d)</th></tr><tr><td><select class="form-control fillSpace" name="listOfInsuranceRecords[' + tblBodyCount + '].countryProRata"></select></td><td><input class="form-control datepickershortyear fillSpace" name="listOfInsuranceRecords[' + tblBodyCount + '].fromProRata" type="text" title="This should be in the format dd/mm/yy" /></td><td><input class="form-control datepickershortyear fillSpace" name="listOfInsuranceRecords[' + tblBodyCount + '].toProRata" type="text" title="This should be in the format dd/mm/yy" /></td><td><input class="form-control fillSpace number" name="listOfInsuranceRecords[' + tblBodyCount + '].totalNoOfWeeks" type="text" /></td></tr><tr><th>US QC in tax year (e)</th><th>Calculation 1 Total (f) = (e) X (13)</th><th></th></tr><tr><td><input class="form-control fillSpace usQcInTaxYear number" name="listOfInsuranceRecords[' + tblBodyCount + '].usQcInTaxYear" type="text" /></td><td><input class="form-control fillSpace calc1 number" name="listOfInsuranceRecords[' + tblBodyCount + '].calc1" type="text" readonly="readonly" /></td><td></td></tr><tr><th>Appropriate lower earnings level (g)</th><th>Calculation 2 Total (h) = (f) X (g)</th><th></th></tr><tr><td><span>&#163;</span><input class="form-control fillSpace appropriateLowerEarnings numberWithDecimal" name="listOfInsuranceRecords[' + tblBodyCount + '].appropriateLowerEarnings" type="text" /></td><td><span>&#163;</span><input class="form-control fillSpace calc2" name="listOfInsuranceRecords[' + tblBodyCount + '].calc2" type="text" readonly="readonly" /></td><td></td></tr><tr><th>UK earnings factor (i)</th><th>Calculation 3 Total (j) = (h) & (i)</th><th></th></tr><tr><td><span>&#163;</span><input class="form-control fillSpace ukEarningsFactor numberWithDecimal" name="listOfInsuranceRecords[' + tblBodyCount + '].ukEarningsFactor" type="text" /></td><td><span>&#163;</span><input class="form-control fillSpace calc3" name="listOfInsuranceRecords[' + tblBodyCount + '].calc3" type="text" readonly="readonly" /></td><td></td></tr><tr><th>Amount required for qualifying year (k)</th><th>Qualifying years (l) = where (j) equals or exceeds (k)</th><th>Rounded UK Weeks Total (m) = (i) / (g)</th></tr><tr><td><span>&#163;</span><input class="form-control fillSpace amountReqForQualYear numberWithDecimal" name="listOfInsuranceRecords[' + tblBodyCount + '].amountReqForQualYear" type="text" /></td><td><input type="text" class="form-control fillSpace" name="listOfInsuranceRecords[' + tblBodyCount + '].qualYears" readonly="readonly" /></td><td><input class="form-control fillSpace roundedUkWeeksTotal" name="listOfInsuranceRecords[' + tblBodyCount + '].roundedUkWeeksTotal" type="text" readonly="readonly" /></td></tr><tr><th>Qualifying UK Weeks (n)</th><th>Qualifying Foreign Weeks (o)</th><th></th></tr><tr><td><input class="form-control fillSpace qualUkWeeks number" name="listOfInsuranceRecords[' + tblBodyCount + '].qualUkWeeks" type="text" /></td><td><input class="form-control fillSpace qualForeignWeeks number" name="listOfInsuranceRecords[' + tblBodyCount + '].qualForeignWeeks" type="text" /></td><td><a href="javascript:void(0);" class="removeProRataUsaPost75">Remove</a></td></tr></tbody>');
 		$(".datepickershortyear").datepicker(datepickerOptionsShortYear);
 		populateUsa();
 	});
@@ -261,20 +261,21 @@ $(document).ready(function() {
 	});
 	
 	// Post 75 EU/RA Calculation of Calc1/Calc2/Calc3
-	$("#proRataEuraTablePost75").on("change", ".noOfForeignEmployed, .twoThirdUpper, .noOfOtherForeign, .appropriateLowerEarnings, .ukEarningsFactor", function() {
+	$("#proRataEuraTablePost75").on("change", ".noOfForeignEmployed, .twoThirdUpper, .noOfOtherForeign, .appropriateLowerEarnings, .ukEarningsFactor, .amountReqForQualYear", function() {
 		
 		var arrayOfElements = $(this).parent().parent().parent().find("td").toArray();
 		
 		var calc1Elem = arrayOfElements[6].childNodes[1];
 		var calc2Elem = arrayOfElements[9].childNodes[1];
 		var calc3Elem = arrayOfElements[11].childNodes[1];
-		//var qualYearsElem = arrayOfElements[14].childNodes[0];
+		var qualYearsElem = arrayOfElements[14].childNodes[0];
 		
 		var noOfForeignEmployed = "";
 		var twoThirdUpper = "";
 		var noOfOtherForeign = "";
 		var appropriateLowerEarnings = "";
 		var ukEarningsFactor = "";
+		var amountReqForQualYear = "";
 		
 		if (arrayOfElements[4].childNodes[0].value) {
 			noOfForeignEmployed = Number(arrayOfElements[4].childNodes[0].value);
@@ -291,7 +292,9 @@ $(document).ready(function() {
 		if (arrayOfElements[10].childNodes[1].value) {
 			ukEarningsFactor = Number(arrayOfElements[10].childNodes[1].value).toFixed(2);
 		}
-		//var amountReqForQualYear = Number(arrayOfElements[13].childNodes[1].value).toFixed(2);
+		if (arrayOfElements[13].childNodes[1].value) {
+			amountReqForQualYear = Number(arrayOfElements[13].childNodes[1].value).toFixed(2);
+		}
 		
 		var calc1 = "";
 		var calc2 = "";
@@ -310,28 +313,33 @@ $(document).ready(function() {
 		
 		$(calc1Elem).val(calc1);
 		$(calc2Elem).val(calc2);
-		$(calc3Elem).val(calc3);
-		
-		/*if (calc3 >= amountReqForQualYear) {
-			$(qualYearsElem).val("Yes");
+		$(calc3Elem).val(calc3);		
+		if (calc3 !== "" && amountReqForQualYear !== "") {
+			if (calc3 >= amountReqForQualYear) {
+				$(qualYearsElem).val("Yes");
+			} else {
+				$(qualYearsElem).val("No");
+			}
 		} else {
-			$(qualYearsElem).val("No");
-		}*/
+			$(qualYearsElem).val("");
+		}
 	})
 	
 	// Post 75 USA Calculation of Calc1/Calc2/Calc3
-	$("#proRataUsaTablePost75").on("change", ".usQcInTaxYear, .appropriateLowerEarnings, .ukEarningsFactor", function() {
+	$("#proRataUsaTablePost75").on("change", ".usQcInTaxYear, .appropriateLowerEarnings, .ukEarningsFactor, .amountReqForQualYear", function() {
 		
 		var arrayOfElements = $(this).parent().parent().parent().find("td").toArray();
 		
 		var calc1Elem = arrayOfElements[5].childNodes[0];
 		var calc2Elem = arrayOfElements[8].childNodes[1];
 		var calc3Elem = arrayOfElements[11].childNodes[1];
+		var qualYearsElem = arrayOfElements[14].childNodes[0];
 		var roundedUkWeeksTotalElem = arrayOfElements[15].childNodes[0];
 		
 		var usQcInTaxYear = "";
 		var appropriateLowerEarnings = "";
 		var ukEarningsFactor = "";
+		var amountReqForQualYear = "";
 		
 		if (arrayOfElements[4].childNodes[0].value) {
 			usQcInTaxYear = Number(arrayOfElements[4].childNodes[0].value);
@@ -341,6 +349,9 @@ $(document).ready(function() {
 		}
 		if (arrayOfElements[10].childNodes[1].value) {
 			ukEarningsFactor = arrayOfElements[10].childNodes[1].value;
+		}
+		if (arrayOfElements[13].childNodes[1].value) {
+			amountReqForQualYear = Number(arrayOfElements[13].childNodes[1].value).toFixed(2);
 		}
 		
 		var calc1 = "";
@@ -366,6 +377,15 @@ $(document).ready(function() {
 		$(calc2Elem).val(calc2);
 		$(calc3Elem).val(calc3);
 		$(roundedUkWeeksTotalElem).val(roundedUkWeeksTotal);
+		if (calc3 !== "" && amountReqForQualYear !== "") {
+			if (calc3 >= amountReqForQualYear) {
+				$(qualYearsElem).val("Yes");
+			} else {
+				$(qualYearsElem).val("No");
+			}
+		} else {
+			$(qualYearsElem).val("");
+		}
 		
 	})
 	
@@ -450,9 +470,9 @@ $(document).ready(function() {
 	});	
 	if (customerSpaDateRule === true && partnerSpaDateRule === true && dateOfMarriageRule === true) {
 		$(".hiddenSpan").hide();
-		$(".spanHidden").show();
+		$(".hiddenDiv").show();
 	} else {
-		$(".spanHidden").hide();
+		$(".hiddenDiv").hide();
 		$(".hiddenSpan").show();
 	}
 	

@@ -12,25 +12,26 @@ import uk.gov.dwp.model.User;
 
 /**
  * Fetches the user details from the database
+ * 
  * @author samba.mitra
  *
  */
 @Service
 public class CustomUserDetailsService implements UserDetailsService {
 
-	@Autowired
-	private UserRepository userRepository;
+    @Autowired
+    private UserRepository userRepository;
 
-	@Override
-	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-		User user = userRepository.findUserByUsername(username);
-		SecureUserDetails userDetails = null;
-		if (user == null) {
-			throw new UsernameNotFoundException(username);
-		} else {
-			userDetails = new SecureUserDetails(user);
-		}
-		return userDetails;
-	}
+    @Override
+    public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+        User user = userRepository.findUserByUsername(username);
+        SecureUserDetails userDetails = null;
+        if (user == null) {
+            throw new UsernameNotFoundException(username);
+        } else {
+            userDetails = new SecureUserDetails(user);
+        }
+        return userDetails;
+    }
 
 }
